@@ -6,5 +6,9 @@ Increase implant slot per body part.
 
 i.e you need to have arm/leg/joint AUGMENT installed to see those count updated.
 
+v1.1:
+Now adds an option to
+1. "Ignore implant type limitation" option to body part. (i.e can't implant quasi augment into mechanical body part. now you can.)
+2. "Ignore Augment\Implant damage from Injury".
 
 While it will not increase enemy's implant count, enemies who can spawn with more than 1 implant may spawn with duplicates.
