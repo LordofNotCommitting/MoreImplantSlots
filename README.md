@@ -14,4 +14,4 @@ Changelog:
 v1.1:
 Now adds an option to
 1. "Ignore implant type limitation" option to body part. (i.e can't implant quasi augment into mechanical body part. now you can.)
-2. "Ignore Augment\Implant damage from Injury".
+2. "Ignore Augment\Implant damage from Injury". Health screen will suggest that those are disabled but the raw stat bonus and active implants will continue to function.
