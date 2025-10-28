@@ -17,6 +17,8 @@ namespace MoreImplantSlots
             this.ModData.AddConfigHeader("STRING:General Settings", "general");
             this.ModData.AddConfigValue("general", "about", "STRING:<color=#f51b1b>On existing save, existing clone with low implant count must have new augment installed to have implant count updated.</color>\n");
             this.ModData.AddConfigValue("general", "Implant_Count", 1, 1, 10, "STRING:Set Implant Count", "STRING:Set the number of implant count you want per body part.");
+            this.ModData.AddConfigValue("general", "Ignore_Implant_Type", false, "STRING:Ignore Implant type", "STRING:Make the system ignore implant type limitation when installing on a body part/augment.\n");
+            this.ModData.AddConfigValue("general", "Ignore_Implant_Injury", false, "STRING:Ignore Implant Injury penalty", "STRING:Turn off disabling of active/passive implant from injuries. Health screen will suggest that they are off but they will continue to be active.\n");
             this.ModData.AddConfigValue("general", "about2", "STRING:<color=#f51b1b>The game must be restarted after setting then saving this config to take effect.</color>\n");
             this.ModData.RegisterModConfigData(ModName);
         }

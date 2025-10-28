@@ -36,6 +36,9 @@
 			<HintPath>$(ManagedPath)UnityEngine.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+		  <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Quasimorph\Quasimorph_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
 		<Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
 			<SpecificVersion>False</SpecificVersion>
 			<HintPath>$(ManagedPath)UnityEngine.CoreModule.dll</HintPath>
