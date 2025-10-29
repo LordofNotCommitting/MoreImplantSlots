@@ -19,7 +19,7 @@ namespace MoreImplantSlots
         static bool ignore_implant_injury = Plugin.ConfigGeneral.ModData.GetConfigValue<bool>("Ignore_Implant_Injury", false);
 
         //passive effect is kept
-        public static bool Prefix(EffectsController effectsController, string woundSlotId)
+        public static bool Prefix()
         {
             return !ignore_implant_injury;
         }
