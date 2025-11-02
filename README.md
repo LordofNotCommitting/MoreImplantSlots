@@ -10,6 +10,8 @@ While it will not increase enemy's implant count, enemies who can spawn with mor
 
 
 Changelog:
+v1.3:
+Now have option to reduce resistance malus or quasimorphosis gain from aug/implants in case this was the only limitation.
 
 v1.2:
 Fixed issue where "ignore injury" did not apply to aug due to a typo.
