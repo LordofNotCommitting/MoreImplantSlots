@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿/**
+using HarmonyLib;
 using MGSC;
 using Newtonsoft.Json.Linq;
 using System;
@@ -34,3 +35,4 @@ namespace MoreImplantSlots
 
     }
 }
+**/
