@@ -10,8 +10,11 @@ While it will not increase enemy's implant count, enemies who can spawn with mor
 
 
 Changelog:
+v1.3.3 (for version 0.9.8.2)
+As of version 0.9.8.2. vanilla implant display no longer show your max implant cap. You either have implant or you don't. This update brings the slot count display back.
 
-v1.3.1, 1.3.2
+
+v1.3.1, 1.3.2 (for version 0.9.8)
 To really go hard, now can turn res malus or quasimorphosis gain from aug/implants into bonus.
 Also supports this feature on res % malus which is new implant on stable.
 
