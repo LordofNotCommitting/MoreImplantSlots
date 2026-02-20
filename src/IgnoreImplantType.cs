@@ -22,6 +22,7 @@ namespace MoreImplantSlots
 
         public static bool Prefix(Mercenary mercenary, BasePickupItem item, ItemStorage activeCargo, PerkFactory perkFactory)
         {
+            
             ImplantRecord implantRecord = item.Record<ImplantRecord>();
             CreatureData creatureData = mercenary.CreatureData;
             string woundSlotBySlotType = WoundSystem.GetWoundSlotBySlotType(creatureData.WoundSlotMap, implantRecord.SlotType);
@@ -31,7 +32,10 @@ namespace MoreImplantSlots
                 SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack, false, 0f);
                 return false;
             }
-            if (!ignore_implant_type) {
+
+            if (!ignore_implant_type)
+            {
+
                 WoundSlotRecord record = Data.WoundSlots.GetRecord(woundSlotBySlotType, true);
                 if (record == null || !implantRecord.NatureTypes.Contains(record.NatureType))
                 {
@@ -41,25 +45,12 @@ namespace MoreImplantSlots
             }
             if (implantSocketData.HasEmptySocket())
             {
-                implantSocketData.InstalledImplants.Add(implantRecord.Id);
+                implantSocketData.AddImplant(implantRecord);
                 if (implantRecord.IsActive)
                 {
                     AugmentationSystem.AddActiveImplant(creatureData, implantRecord.Id, perkFactory);
                 }
-                ItemInteractionSystem.ConsumeItem(item);
-                AugmentationSystem.ConfigureImplicitEffects(creatureData);
-                return false;
-            }
-            if (implantSocketData.InstalledImplants.Count > 0)
-            {
-                string implantId = implantSocketData.InstalledImplants.First<string>();
-                AugmentationSystem.RemoveImplant(creatureData, implantSocketData, implantId, activeCargo, true);
-                implantSocketData.InstalledImplants.Add(implantRecord.Id);
-                if (implantRecord.IsActive)
-                {
-                    AugmentationSystem.AddActiveImplant(creatureData, implantRecord.Id, perkFactory);
-                }
-                ItemInteractionSystem.ConsumeItem(item);
+                ItemInteractionSystem.ConsumeItem(item, 1);
                 AugmentationSystem.ConfigureImplicitEffects(creatureData);
                 return false;
             }

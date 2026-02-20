@@ -20,14 +20,15 @@ namespace MoreImplantSlots
         static bool ignore_implant_injury = Plugin.ConfigGeneral.ModData.GetConfigValue<bool>("Ignore_Implant_Injury", false);
 
         //passive effect is kept
-        public static void Postfix(ref TooltipFactory __instance, string woundSlotId, List<BodyPartWound> wounds, List<ImplicitAugEffect> implicitAugEffects, EffectsController effectsController, int maxSockets, List<string> installedImplants)
+        public static void Postfix(ref TooltipFactory __instance, string woundSlotId, List<BodyPartWound> wounds, List<ImplicitAugEffect> implicitAugEffects, EffectsController effectsController, int maxSockets, ImplantSocketData socketData)
         {
-            if (installedImplants.Count > 0)
+            
+            if (socketData.InstalledImplantsData.Count > 0)
             {
                 //__instance.AddPanelToTooltip().SetIcon("common_implant_sockets_green").LocalizeName("woundtype.noimplants").SetNameColor(Colors.AltGreen);
                 //bring back the old
                 __instance.AddPanelToTooltip().SetIcon("common_implant_sockets_green").LocalizeName("tooltip.ImplantSockets").SetNameColor(Colors.AltGreen)
-                .SetValue(string.Format("{0}{1}", installedImplants.Count, ("/" + maxSockets).WrapInColor(Colors.DarkYellow)));
+                .SetValue(string.Format("{0}{1}", socketData.InstalledImplantsData.Count, ("/" + socketData.TotalSockets).WrapInColor(Colors.DarkYellow)));
             }
         }
 

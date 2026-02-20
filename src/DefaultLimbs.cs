@@ -28,7 +28,12 @@ namespace MoreImplantSlots
             {
                 if (woundSlotMap[key].TotalSockets != implant_slot_newval)
                 {
+
+                    //Plugin.Logger.Log(key);
+                    //Plugin.Logger.Log("" + woundSlotMap[key]);
                     woundSlotMap[key].TotalSockets = implant_slot_newval;
+
+
                 }
             }
         }
