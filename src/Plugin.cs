@@ -1,21 +1,25 @@
-﻿using System;
+﻿using HarmonyLib;
+using MGSC;
+using ModLoader_Bootstrap_MoreImplantSlots;
+using MoreImplantSlots;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using HarmonyLib;
-using MGSC;
 using UnityEngine;
 
 namespace MoreImplantSlots
 {
-    
-
-
-    public static class Plugin
+    public class Plugin : BootstrapMod
     {
+        public Plugin(HookEvents hookEvents, bool isBeta) : base(hookEvents, isBeta)
+        {
+            hookEvents.AfterConfigsLoaded += AfterConfig;
+        }
+
         // Token: 0x1700000A RID: 10
         // (get) Token: 0x06000042 RID: 66 RVA: 0x000032EA File Offset: 0x000014EA
         public static string ModAssemblyName
@@ -80,4 +84,6 @@ namespace MoreImplantSlots
             new Harmony("LoC_" + Plugin.ModAssemblyName).PatchAll();
         }
     }
+
+
 }
