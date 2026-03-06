@@ -10,6 +10,13 @@ While it will not increase enemy's implant count, enemies who can spawn with mor
 
 
 Changelog:
+
+v1.3.5
+Implants have charges now in 0.9.9. Added option to make implant consume no charge.
+
+v1.3.4
+Now 0.9.9 beta-compatible.
+
 v1.3.3 (for version 0.9.8.2)
 As of version 0.9.8.2. vanilla implant display no longer show your max implant cap. You either have implant or you don't. This update brings the slot count display back.
 
