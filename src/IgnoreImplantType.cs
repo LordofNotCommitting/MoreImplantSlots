@@ -51,7 +51,7 @@ namespace MoreImplantSlots
                     AugmentationSystem.AddActiveImplant(creatureData, implantRecord.Id, perkFactory);
                 }
                 ItemInteractionSystem.ConsumeItem(item, 1);
-                AugmentationSystem.ConfigureImplicitEffects(creatureData);
+                AugmentationSystem.ConfigureImplicitEffects(creatureData, false);
                 return false;
             }
             SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack, false, 0f);
