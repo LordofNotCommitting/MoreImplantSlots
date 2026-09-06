@@ -11,6 +11,15 @@ While it will not increase enemy's implant count, enemies who can spawn with mor
 
 Changelog:
 
+v1.3.8
+I was going to do raise slot limit on 1.3.7 but I forgot. But now there is even mod to do it. I count that as request of some description. Implant limit raised to 50.
+
+v1.3.7
+I've learned how to inject data directly into wound data so I can retire few functions.
+
+v1.3.6
+Minor tag update to make it to 1.0 Release.
+
 v1.3.5
 Implants have charges now in 0.9.9. Added option to make implant consume no charge.
 
