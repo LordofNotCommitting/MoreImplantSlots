@@ -68,6 +68,7 @@
 
 	<Target Name="ModBaseItems" AfterTargets="PostBuildEvent">
 		<Copy SourceFiles="../modmanifest.json" DestinationFolder="$(TargetDir)" />
+		<Copy SourceFiles="../version-info.json" DestinationFolder="$(TargetDir)" />
 		<Copy SourceFiles="../media/thumbnail.png" DestinationFolder="$(TargetDir)" ContinueOnError="true" />
 	</Target>
 
