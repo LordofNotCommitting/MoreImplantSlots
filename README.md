@@ -11,6 +11,9 @@ While it will not increase enemy's implant count, enemies who can spawn with mor
 
 Changelog:
 
+v1.4
+Updated tooltip section so it displays multiple same implant as 1 row. You'd need different mod(https://steamcommunity.com/sharedfiles/filedetails/?id=3796079010) to use the same implant in question though.
+
 v1.3.8
 I was going to do raise slot limit on 1.3.7 but I forgot. But now there is even mod to do it. I count that as request of some description. Implant limit raised to 50.
 
